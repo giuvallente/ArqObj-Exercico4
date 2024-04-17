@@ -19,7 +19,7 @@ public class InvestidorController {
 
     @PostMapping("/investidor")
     @ResponseStatus(HttpStatus.CREATED)
-    public Investidor salvarInvestidor(Investidor investidor) {
+    public Investidor salvarInvestidor(@RequestBody Investidor investidor) {
         return investidorService.cadastrarInvestidor(investidor);
     }
 
